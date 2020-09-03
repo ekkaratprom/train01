@@ -14,6 +14,7 @@ export class AppComponent {
 
   constructor(public service: RoomService) { }
 
+  // tslint:disable-next-line: use-lifecycle-interface
   ngOnInit(): void {
     this.getAll();
   }
