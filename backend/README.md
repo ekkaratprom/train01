@@ -19,3 +19,7 @@ java -jar target\spring-maven-0.0.1-SNAPSHOT.jar
 ```
 java -jar -Dserver.port=9090 target\explorecali-0.0.1-SNAPSHOT.jar
 ```
+
+- Swagger-ui
+```
+```
