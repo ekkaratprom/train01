@@ -22,4 +22,5 @@ java -jar -Dserver.port=9090 target\explorecali-0.0.1-SNAPSHOT.jar
 
 - Swagger-ui
 ```
+http://localhost:8080/swagger-ui/
 ```

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@ResponseBody
 @RequestMapping(value = "/api")
 public class RoomWebController {
     @Autowired
@@ -14,7 +15,6 @@ public class RoomWebController {
 
     @CrossOrigin
     @GetMapping("/v1/room")
-    @ResponseBody
     public Iterable<Room> getRooms(){
         return this.roomRepository.findAll();
     }
