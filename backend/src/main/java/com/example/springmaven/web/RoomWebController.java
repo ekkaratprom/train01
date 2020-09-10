@@ -39,12 +39,17 @@ public class RoomWebController {
     }
 
     @CrossOrigin
-    @GetMapping("/v1/room/{roomNumber}")
+    @GetMapping("/v1/searchbyroomnumber/{roomNumber}")
     public List<Room> getRoomByRoomNumber(@PathVariable(value =  "roomNumber") String roomNumber){
 //        verifyRoomNumber(roomNumber);
         return roomRepository.findRoomByRoomNumber(roomNumber);
     }
-
+    @CrossOrigin
+    @GetMapping("/v1/searchbyroomname/{roomName}")
+    public List<Room> getRoomByRoomName(@PathVariable(value =  "roomName") String roomName){
+//        verifyRoomNumber(roomNumber);
+        return roomRepository.findRoomByRoomName(roomName);
+    }
 //    private Room verifyRoomNumber(String roomNumber) throws NoSuchElementException {
 //        return roomRepository.findRoomByRoomNumber(roomNumber).orElseThrow(() ->
 //                new NoSuchElementException("Tour does not exist " + roomNumber));
